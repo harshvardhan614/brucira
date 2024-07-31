@@ -1,41 +1,90 @@
-import { NAV_LINKS } from "@/data"
-import Image from "next/image"
-import Link from "next/link"
-import Button from "./common/Button"
+// Create or modify `components/Navbar.tsx`
+"use client";
+import { useState } from 'react';
+import { NAV_LINKS } from '@/data';
+import Image from 'next/image';
+import Link from 'next/link';
+import Button from './common/Button';
 
-const Navbar = () => {
-  return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
-      <Link href="/">
-        <Image src="/logo.svg" alt="logo" width={100} height={40} className="w-auto h-[40px]"/>
-      </Link>
+const Navbar: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-      <div className="lg:flexCenter hidden">
-        <Button 
-          type="button"
-          title="Request Demo"
-          icon=""
-          variant="violetButton"
-        />
-      </div>
+    return (
+        <nav className="flexBetween max-container padding-container relative z-10 py-5">
+            <Link href="/">
+                <Image src="/logo.svg" alt="logo" width={100} height={40} className="w-auto h-[40px]" />
+            </Link>
 
-      <Image 
-        src="/menu.svg"
-        alt="menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer lg:hidden"
-      />
-    </nav>
-  )
-}
+            <ul className={`hidden lg:flex h-full gap-12 ${isMenuOpen ? 'flex' : 'hidden'} lg:flex`}>
+                {NAV_LINKS.map((link) => (
+                    <li key={link.key} className="flexCenter">
+                        <Link href={link.href} className="regular-16 text-DarkBlue cursor-pointer transition-all font-semibold hover:text-violet-10">
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
 
-export default Navbar
+            <div className="hidden lg:flex lg:flexCenter gap-4">
+                <Button
+                    type="button"
+                    title="Sign In"
+                    icon=""
+                    variant="bg-none text-violet border-none font-semibold"
+                />
+                <Button
+                    type="button"
+                    title="Request Demo"
+                    icon=""
+                    variant="violetButton"
+                />
+            </div>
+
+            <button
+                onClick={toggleMenu}
+                className="lg:hidden"
+                aria-label="Toggle menu"
+            >
+                <Image
+                    src={isMenuOpen ? "/cross.svg" : "/menu.svg"}
+                    alt="menu"
+                    width={32}
+                    height={32}
+                    className="inline-block cursor-pointer"
+                />
+            </button>
+
+            <div className={`fixed inset-0 z-20 bg-black bg-opacity-50 transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>
+
+            <ul className={`fixed top-0 right-0 z-30 h-full w-3/4 max-w-sm bg-white shadow-lg transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
+                {NAV_LINKS.map((link) => (
+                    <li key={link.key} className="border-b border-gray-200">
+                        <Link href={link.href} className="block p-4 text-gray-900 hover:bg-gray-200">
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
+                <li className="p-4">
+                    <Button
+                        type="button"
+                        title="Sign In"
+                        icon=""
+                        variant="bg-none text-violet border-none font-semibold"
+                    />
+                    <Button
+                        type="button"
+                        title="Request Demo"
+                        icon=""
+                        variant="violetButton"
+                    />
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+export default Navbar;
