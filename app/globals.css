@@ -41,4 +41,13 @@ body{
     .violetButton{
         @apply bg-violet text-white border-violet hover:bg-white hover:text-violet transition-all;
     }
+
+    .lightButton{
+        @apply text-[12px] bg-violet-10 text-violet border-violet-10 font-semibold rounded-full;
+    }
+
+    .testimonial-carousel-container {
+        @apply  rounded-lg overflow-hidden;
+      }
+      
 }

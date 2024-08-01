@@ -6,8 +6,8 @@ import Button from './common/Button'
 
 const Footer = () => {
     return (
-        <footer className="flexCenter">
-            <div className="padding-container max-container flex w-full flex-col gap-10">
+        <footer className="flexCenter mt-10">
+            <div className="padding-container mx-auto flex w-full max-w-7xl flex-col gap-10">
                 <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
                     <div className="flexCenter flex-col">
                         <Link href="/">
@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className='flex flex-wrap gap-10 sm:justify-between md:flex-1'>
                         {FOOTER_LINKS.map((columns, index) => (
                             <FooterColumn title={columns.title} key={index}>
-                                <ul className="regular-14 flex flex-col gap-4 text-gray-30">
+                                <ul className="regular-14 flex flex-col gap-4 text-violet">
                                     {columns.links.map((link) => (
                                         <Link href="/" key={link} className='text-DarkBlue'>
                                             {link}
@@ -80,7 +80,7 @@ type FooterColumnProps = {
 const FooterColumn = ({ title, children }: FooterColumnProps) => {
     return (
         <div className="flex flex-col gap-5">
-            <h4 className="bold-18 whitespace-nowrap text-violet-10">{title}</h4>
+            <h4 className="text[16px] font-medium whitespace-nowrap text-violet">{title}</h4>
             {children}
         </div>
     )

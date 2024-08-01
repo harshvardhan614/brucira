@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         violet: {
           DEFAULT: '#5F53D4',
-          10: '#5F53D4',
+          10: '#6053d411',
         },
         gray: {
           10: '#EEEEEE',

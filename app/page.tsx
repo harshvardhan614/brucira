@@ -1,8 +1,11 @@
 import Company from "@/components/Company";
 import Data from "@/components/Data";
 import Footer from "@/components/Footer";
+import InsightCorner from "@/components/InsightCorner";
 import MainHead from "@/components/MainHead";
-import Image from "next/image";
+import Pipeline from "@/components/Pipeline";
+import Revenue from "@/components/Revenue";
+import Testimonials from "@/components/Testimonials";
 
 
 export default function Home() {
@@ -11,6 +14,10 @@ export default function Home() {
     <MainHead/>
     <Company/>
     <Data/>
+    <Revenue/>
+    <Pipeline/>
+    <Testimonials/>
+    <InsightCorner/>
     <Footer/>
     </>
   );

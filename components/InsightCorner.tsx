@@ -22,7 +22,7 @@ const InsightCorner = () => {
             </div>
             {/* Content */}
             <div className="max-w-[80vw] md:max-w-2xl lg:max-w-[50vw] flexCenter flex-col gap-4 py-4 px-2">
-                <Heading title="Follow the latest trial insights on the Story Corner!" variant="text-white font-bold text-center lg:text-5xl" />
+                <Heading title="Follow the latest trial insights on the Story Corner!" variant="text-white font-bold text-center lg:text-4xl" />
                 <Para title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." variant="text-gray-30 text-center w-[90%] mx-auto" />
                 {/* Email Form */}
                 <EmailForm />

@@ -15,7 +15,7 @@ const Data: React.FC = () => {
   const isMobile = size.width < 768
 
   return (
-    <div className="relative flexCenter flex-col my-20">
+    <div className="relative flexCenter flex-col py-20 max-container">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -36,9 +36,9 @@ const Data: React.FC = () => {
 
       {/* Conditional Image Rendering */}
       {isMobile ? (
-        <Image src="/dataImgMobile.svg" alt="Data" className="inline-block w-full max-w-6xl object-cover py-10 padding-container" width={768} height={432} />
+        <Image src="/dataImgMobile.svg" alt="Data" className="inline-block w-full max-w-6xl object-cover py-10 padding-container cursor-pointer" width={768} height={432} />
       ) : (
-        <Image src="/dataImg.svg" alt="Data" className="inline-block w-full max-w-6xl object-cover py-10 padding-container" width={1320} height={720} />
+        <Image src="/dataImg.svg" alt="Data" className="inline-block w-full max-w-6xl object-cover py-10 padding-container cursor-pointer" width={1320} height={720} />
       )}
     </div>
   );

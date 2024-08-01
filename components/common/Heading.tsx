@@ -7,7 +7,7 @@ type HeadingProps = {
 
 const Heading = ({  title,  variant}: HeadingProps) => {
   return (
-    <h1 className={`mb-4 text-[40px] md:text-5xl lg:text-6xl ${variant}`}>
+    <h1 className={`mb-4 text-[27px] md:text-4xl lg:text-5xl ${variant}`}>
         {title}
     </h1>
   )

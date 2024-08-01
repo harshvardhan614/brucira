@@ -5,7 +5,7 @@ import Para from './common/Para';
 
 const Company = () => {
     return (
-        <div className="flexCenter flex-col max-container">
+        <div className="flexCenter flex-col max-container bg[#F9F7FE]">
             <Para title="TRUSTED BY" variant="text-DarkBlue uppercase font-light py-5" />
             <div className="flexCenter flex-wrap gap-4 md:gap-16 max-w-7xl border-b-2 border-gray-10 pb-16">
                 {companies.map((company) => (
