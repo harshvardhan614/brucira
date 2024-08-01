@@ -43,7 +43,7 @@ body{
     }
 
     .lightButton{
-        @apply text-[12px] bg-violet-10 text-violet border-violet-10 font-semibold rounded-full;
+        @apply text-[12px] bg-violet-10 border-violet-10 font-semibold rounded-full;
     }
 
     .testimonial-carousel-container {

@@ -39,7 +39,7 @@ const Pipeline = () => {
               type="button"
               title="Use Case"
               icon=""
-              variant="lightButton"
+              variant="lightButton text-violet"
             />
             <Heading title="Intelligence for any part of the customer journey" variant="text-DarkBlue font-bold text-start mb-[0px]" />
             <Para title="FunnelStory is designed to let go-to-market leaders leverage product and conversational data to drive conversions, adoption, renewals, and expansion." variant="text-gray-30 text-justify mx-auto" />

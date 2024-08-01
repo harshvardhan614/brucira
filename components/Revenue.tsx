@@ -21,7 +21,7 @@ const Revenue = () => {
                             type="button"
                             title="Funnel Visiblity"
                             icon="/button/eyes.png"
-                            variant="lightButton"
+                            variant="lightButton text-violet"
                         />
                         <Heading title="You can&apos;t action what you can&apos;t see" variant="text-DarkBlue font-bold text-start mb-[0px]" />
                         <Para title="View all of your account funnel activity in real-time so you know where your pipeline stands." variant="text-gray-30 text-justify mx-auto" />
@@ -63,7 +63,7 @@ const Revenue = () => {
                             type="button"
                             title="Accelerate Revenue"
                             icon="/button/forward.png"
-                            variant="lightButton"
+                            variant="lightButton text-violet"
                         />
                         <Heading title="Coach your team and close more deals" variant="text-DarkBlue font-bold text-start mb-[0px]" />
                         <Para title="Act on funnel intelligence and make revenue more predictable. " variant="text-gray-30 text-justify mx-auto" />

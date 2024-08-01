@@ -1,25 +1,31 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+
 const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 0,
+        height: 0,
     });
-  
+
     useEffect(() => {
-        const handleResize = () => {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        };
-  
-      window.addEventListener('resize', handleResize);
-      handleResize();
-      
-      return () => window.removeEventListener('resize', handleResize);
+        // Only execute this code on the client side
+        if (typeof window !== 'undefined') {
+            const handleResize = () => {
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            };
+
+            window.addEventListener('resize', handleResize);
+            // Set initial size
+            handleResize();
+
+            return () => window.removeEventListener('resize', handleResize);
+        }
     }, []);
-  
+
     return windowSize;
-  };
+};
+
 export default useWindowSize;

@@ -5,6 +5,7 @@ import InsightCorner from "@/components/InsightCorner";
 import MainHead from "@/components/MainHead";
 import Pipeline from "@/components/Pipeline";
 import Revenue from "@/components/Revenue";
+import Solution from "@/components/Solution";
 import Testimonials from "@/components/Testimonials";
 
 
@@ -14,6 +15,7 @@ export default function Home() {
     <MainHead/>
     <Company/>
     <Data/>
+    <Solution/>
     <Revenue/>
     <Pipeline/>
     <Testimonials/>
