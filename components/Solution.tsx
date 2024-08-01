@@ -13,7 +13,7 @@ const Solution = () => {
             {/* Background Image */}
             <div className="absolute inset-0 -z-10">
                 <Image
-                    src="/solutions.svg"
+                    src="/solution.svg"
                     alt="Background"
                     layout="fill"
                     objectFit="cover"
