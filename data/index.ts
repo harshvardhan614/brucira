@@ -118,3 +118,21 @@ export const TESTIMONIALS = [
     companyName: "Innova"
   },
 ];
+
+export const cardData = [
+  {
+    iconSrc: '/icons/icon1.svg',
+    heading: 'Ingest your data',
+    paragraph: 'Connect your product interactions and conversational data without engineer support.',
+  },
+  {
+    iconSrc: '/icons/icon2.svg',
+    heading: 'Customer Activity Model',
+    paragraph: 'Bring your product data together in one place to power your revenue workflows.',
+  },
+  {
+    iconSrc: '/icons/icon3.svg',
+    heading: 'Activate your data',
+    paragraph: 'Get the insights that empower you to make decisions to grow your business.',
+  },
+];
